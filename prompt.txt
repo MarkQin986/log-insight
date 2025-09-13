@@ -1,0 +1,15 @@
+In this folder, create a log-insight project with the following requirements:
+1. Main purpose of the project: collect logs from various parts of a software project during production usage, provide login logs, and provide logs for the number of tokens used per single large model request.
+2. Create two separate projects (frontend and backend).
+  - Frontend project: built with React.
+  - Backend project: built with Node.js.
+3. The backend project should be named log-insight-backend and provide the following functions:
+a. Provide a login API for the frontend, with username and password stored in a local .env file.
+b. Provide general log APIs, where uploads to these APIs do not require login.
+c. Provide a login log API, and record a log entry whenever a user logs into the system.
+d. Provide an API to log the number of tokens used in a single large model request, where uploads do not require login.
+4. The frontend project should be named log-insight-ui and provide the following functions:
+a. Login functionality: call the log-insight-backend login API to authenticate, and all pages require login to be accessed.
+b. Display logs from log-insight-backend, with search and pagination features.
+c. Allow log deletion based on conditions and date.
+5. Data storage: use pino to store logs into local files.
